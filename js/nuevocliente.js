@@ -1,5 +1,5 @@
 import { mostrarAlerta } from './funciones.js';
-
+import { nuevoCliente } from './API.js'
 (function() {
     const formulario = document.querySelector('#formulario');
     formulario.addEventListener('submit', validarCliente);
@@ -12,12 +12,23 @@ import { mostrarAlerta } from './funciones.js';
         const telefono = document.querySelector('#telefono').value;
         const empresa = document.querySelector('#empresa').value;
 
-       if( nombre === '' || email === '' || telefono === '' || empresa === '') {
-           mostrarAlerta('todos los campos obligatorios')
-       } else {
-           console.log('validación exitosa')
+       const cliente = {
+           nombre,
+           email,
+           telefono,
+           empresa
        }
+
+       if(validar(cliente)) {
+           mostrarAlerta('todos los campos son obligatorios');
+           return;
+       }
+       
+       nuevoCliente(cliente)
     }
 
+    function validar(obj) {
+        return !Object.values(obj).every( input => input !== '');
+    }
 
 })();
