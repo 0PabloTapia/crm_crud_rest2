@@ -1,13 +1,6 @@
 {
   "clientes": [
     {
-      "nombre": "Pablo New!",
-      "email": "correo2@correo.com",
-      "telefono": "12",
-      "empresa": "12212",
-      "id": 26
-    },
-    {
       "nombre": "Pablo",
       "email": "asd@hola.com",
       "telefono": "54443543",
@@ -20,13 +13,6 @@
       "telefono": "6454342",
       "empresa": "Bureau",
       "id": 28
-    },
-    {
-      "nombre": "popux",
-      "email": "popinx@sanagustin.cl",
-      "telefono": "54443543",
-      "empresa": "Bureau",
-      "id": 29
     }
   ]
 }
